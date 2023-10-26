@@ -30,7 +30,7 @@ body {
 
 .divHeadMain {
 	animation-name: headStartAni;
-	animation-duration: 0.5s;
+	animation-duration: 0.8s;
 	position: relative;
 	text-align: center;
 	background-color: paleturquoise;
