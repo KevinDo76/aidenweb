@@ -9,3 +9,22 @@ function headerClick() {
 		body.appendChild(iframe);
 	}
 }
+
+var thing = document.createElement("p");
+var text = document.createTextNode("balls");
+thing.appendChild(text);
+thing.style = "position: absolute;";
+thing.style.zIndex = 10;
+thing.className = "paraMain1";
+document.body.appendChild(thing);
+
+document.body.addEventListener("mousemove",moveball, false);
+document.body.addEventListener("mouseleave",moveball, false);
+document.body.addEventListener("mouseenter",moveball, false);
+
+function moveball(event) { 
+	var x=event.clientX; 
+	var y=event.clientY;  
+	thing.style.left = x+"px";
+	thing.style.top = y+"px";
+} 
