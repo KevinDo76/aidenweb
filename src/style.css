@@ -25,6 +25,11 @@ body {
 
 }
 
+@keyframes body1 {
+	from {left: -50%; opacity: 0%;}
+	to {left: 0px; opacity: 100%;}
+}
+
 @keyframes headStartAni {
 	from {top: -170px; opacity: 0%;}
 	to {top: 0px; opacity: 100%;}
@@ -38,11 +43,11 @@ body {
   }
 
 .divHeadMain {
-	animation: headStartAni 0.8s ease-in-out 0.5s, headSpin 80s ease-in-out 0s infinite;
+	animation: headStartAni 0.8s ease-in-out 0s, headSpin 80s ease-in-out 0s infinite;
 	position: relative;
 	text-align: center;
 	background-color: #4c4c4c;
-	width: 700px;
+	width: 70%;
 	padding: 10px;
 	border-radius: 10px;
 	margin-left: auto;
@@ -50,4 +55,18 @@ body {
 	background-size: 400%;
 	background-image: linear-gradient(45deg,#4c4c4c 20%,#010101 50%, #f2bdad 150%);
 	text-size-adjust: none;
+}
+
+.divBody1 {
+	position: relative;
+	color: #96a8d7;
+	width: 80%;
+	height: 500px;
+	margin-top: 50px;
+	border-radius: 10px;
+	background-color: #4c4c4c;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	animation: body1 0.8s ease-in-out 0s;
 }
