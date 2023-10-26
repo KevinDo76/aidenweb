@@ -23,8 +23,8 @@ document.body.addEventListener("mouseleave",moveball, false);
 document.body.addEventListener("mouseenter",moveball, false);
 
 function moveball(event) { 
-	var x=event.clientX; 
-	var y=event.clientY;  
+	var x=event.pageX; 
+	var y=event.pageY;  
 	thing.style.left = x+"px";
 	thing.style.top = y+"px";
 } 
