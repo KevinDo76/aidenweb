@@ -69,4 +69,5 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	animation: body1 0.8s ease-in-out 0s;
+	background-image: linear-gradient(-45deg,#4c4c4c 20%,#010101 160%);
 }
