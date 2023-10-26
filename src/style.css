@@ -1,0 +1,43 @@
+body {
+	background-color: powderblue;
+}
+
+.mainheader {
+	font-family: Lucida Console, monospace;
+	text-align: center;
+	text-decoration: underline;	
+	margin-bottom: 0px;
+	font-size: xx-large;
+}
+
+.paraMain1 {
+	font-family: Lucida Console, monospace;
+	font-style: italic;
+	text-align: center;
+	margin-top: 0px;
+	font-size: large;
+}
+
+.divHeadMainInnder {
+	position: absolute;
+
+}
+
+@keyframes headStartAni {
+	from {top: -170px;}
+	to {top: 0px;}
+  }
+
+.divHeadMain {
+	animation-name: headStartAni;
+	animation-duration: 0.5s;
+	position: relative;
+	text-align: center;
+	background-color: paleturquoise;
+	width: 700px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50px;
+	text-size-adjust: none;
+}
