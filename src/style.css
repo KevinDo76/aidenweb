@@ -75,7 +75,7 @@ body {
 .divBody1 {
 	position: relative;
 	color: #96a8d7;
-	width: 800px;
+	width: 60%;
 	height: 800px;
 	margin-top: 50px;
 	border-radius: 10px;
@@ -85,4 +85,13 @@ body {
 	margin-right: auto;
 	animation: body1Ani 0.8s ease-in-out 0s;
 	background-image: linear-gradient(-45deg,#4c4c4c 20%,#010101 160%);
+}
+
+.ball {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	position: absolute;
+	background-color: #96a8d7;
+	z-index: 10;
 }
