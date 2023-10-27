@@ -27,11 +27,11 @@ function computeCursorBallPhysic() {
 	let distanceToCen = Math.sqrt(Math.pow(currentCur.x - GravPos.x,2) + Math.pow(GravPos.y - currentCur.y,2));
 	let VectToCen = {x: (GravPos.x - currentCur.x)/distanceToCen, y: (currentCur.y - GravPos.y)/distanceToCen};
 	let velocity = {x: (currentCur.x - prevCur.x), y: (currentCur.y - prevCur.y)};
-	let Acc = {x: gravConst/(distanceToCen*distanceToCen+1)*VectToCen.x, y:gravConst/(distanceToCen*distanceToCen+1)*-VectToCen.y};
+	let Acc = {x: gravConst/(distanceToCen*distanceToCen+0.1)*VectToCen.x, y:gravConst/(distanceToCen*distanceToCen+0.1)*-VectToCen.y};
 	//let Acc = {x: VectToCen.x*0.9 - velocity.x*0.3, y:VectToCen.y*-0.9 - velocity.y*0.3};
 	Acc = {x: Acc.x - velocity.x*0.3, y: Acc.y - velocity.y*0.3};
-	Acc.x = Math.min(Math.max(Acc.x,-5),5);
-	Acc.y = Math.min(Math.max(Acc.y,-5),5);
+	Acc.x = Math.min(Math.max(Acc.x,-15),15);
+	Acc.y = Math.min(Math.max(Acc.y,-15),15);
 
 
 	currentCur.x = 2 * currentCur.x - prevCur.x + Acc.x * (timeStep*timeStep);
@@ -48,4 +48,7 @@ function computeCursorBallPhysic() {
 function moveGravCenter(event) { 
 	GravPos.x = event.pageX; 
 	GravPos.y = event.pageY;  
+	let gravCen = document.getElementById("gravCen");
+	gravCen.style.left = (GravPos.x-5)+"px";
+	gravCen.style.top = (GravPos.y-5)+"px";
 } 
