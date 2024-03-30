@@ -1,0 +1,97 @@
+body {
+	background-color: #010101;
+	margin:0px;
+}
+
+.mainheader {
+	font-family: Lucida Console, monospace;
+	text-align: center;
+	text-decoration: underline;	
+	margin-bottom: 0px;
+	font-size: xx-large;
+	color: #96a8d7;
+}
+
+.paraMain1 {
+	font-family: Lucida Console, monospace;
+	font-style: italic;
+	text-align: center;
+	margin-top: 5px;
+	font-size: large;
+	color: #ff5e37;
+}
+
+.divHeadMainInnder {
+	position: absolute;
+
+}
+
+@keyframes topbarAni {
+	from {left: -100%; opacity: 0%;}
+	to {left: 0px; opacity: 100%;}
+}
+
+@keyframes body1Ani {
+	from {left: -100%; opacity: 0%;}
+	to {left: 0px; opacity: 100%;}
+}
+
+@keyframes headStartAni {
+	from {right: -100%; opacity: 0%;}
+	to {right: 0px; opacity: 100%;}
+  }
+
+
+  @keyframes headSpin {
+	0% {background-position: 0%;}
+	50% {background-position: 100%;}
+	100% {background-position: 0%;}
+  }
+
+.divHeadMain {
+	animation: headStartAni 0.8s ease-in-out 0s, headSpin 80s ease-in-out 0s infinite;
+	position: relative;
+	text-align: center;
+	background-color: #4c4c4c;
+	width: 70%;
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 400%;
+	background-image: linear-gradient(45deg,#4c4c4c 20%,#010101 50%, #f2bdad 150%);
+	text-size-adjust: none;
+}
+
+.topbar {
+	position: relative;
+	animation: topbarAni 0.8s ease-in-out 0s;
+	height: 40px;
+	background-color: #ff5e37;
+	margin:0px;
+	margin-bottom: 10px;
+}
+
+.divBody1 {
+	position: relative;
+	color: #96a8d7;
+	width: 60%;
+	height: 800px;
+	margin-top: 50px;
+	border-radius: 10px;
+	background-color: #4c4c4c;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	animation: body1Ani 0.8s ease-in-out 0s;
+	background-image: linear-gradient(-45deg,#4c4c4c 20%,#010101 160%);
+}
+
+.ball {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	position: absolute;
+	background-color: #96a8d7;
+	z-index: 10;
+}
