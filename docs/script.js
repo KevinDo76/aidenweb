@@ -38,7 +38,7 @@ function computeCursorBallPhysic() {
 	currentCur.y = 2 * currentCur.y - prevCur.y + Acc.y * (timeStep*timeStep);
 	prevCur = {x: tempPrevPos.x, y: tempPrevPos.y};
 
-	currentCur = {x: Math.min(Math.max(currentCur.x,20),window.innerWidth-20),y: Math.min(Math.max(currentCur.y,0),window.innerHeight-20)};
+	currentCur = {x: Math.min(Math.max(currentCur.x,20),window.innerWidth-20),y: Math.min(Math.max(currentCur.y,0),document.documentElement.scrollHeight-20)};
 
 	let ball = document.getElementById("ball");
 	ball.style.left = (currentCur.x-5)+"px";
