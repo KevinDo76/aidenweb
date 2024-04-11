@@ -13,7 +13,7 @@ function headerClick() {
 var currentCur = {x:20,y:20};
 var prevCur = {x:20,y:20};
 var GravPos = {x:100,y:100};
-
+var timeStep = 0.05;
 document.body.addEventListener("mousemove",moveGravCenter, false);
 document.body.addEventListener("mouseleave",moveGravCenter, false);
 document.body.addEventListener("mouseenter",moveGravCenter, false);
@@ -21,7 +21,6 @@ document.body.addEventListener("mouseenter",moveGravCenter, false);
 setInterval(computeCursorBallPhysic,0.001)
 
 function computeCursorBallPhysic() {
-	let timeStep = 0.05;
 	let gravConst = 1000000;
 	let tempPrevPos = {x: currentCur.x, y: currentCur.y};
 	let distanceToCen = Math.sqrt(Math.pow(currentCur.x - GravPos.x,2) + Math.pow(GravPos.y - currentCur.y,2));
