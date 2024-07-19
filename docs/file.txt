@@ -1,0 +1,49 @@
+import turtle
+from PIL import Image
+
+
+MrSmithIMG = Image.open("C:\\Users\\quand\\Downloads\\IMG_3468.png")
+resolution = MrSmithIMG.size
+MrSmithIMG = MrSmithIMG.resize((int(resolution[0]/50),int(resolution[1]/50)))
+counter = 0
+turtle.pensize(5)
+pix = MrSmithIMG.load()
+resolution = MrSmithIMG.size
+
+turtle.speed(-1)
+turtle.delay(0)
+turtle.tracer(0, 0)
+turtle.penup()
+
+for y in range(resolution[1]):
+    turtle.penup()
+    for x in range(resolution[0]):
+        counter +=1
+        if counter%1000==0:
+            turtle.update()
+        color = pix[x,y]
+            
+        coordX = x*5
+        coordY = y*5
+
+        turtle.goto(coordX-200, -coordY+200)
+            
+            
+        average = (color[0]+color[1]+color[2])/3
+
+        maxn = max(color[0], color[1], color[2])
+        minn = min(color[0], color[1], color[2])
+        lum = (maxn + minn) / 2
+        turtle.pendown()
+        normalized = (lum/255)
+
+            
+
+        turtle.color((color[0]/255),(color[1]/255),(color[2]/255))
+        
+    turtle.update()
+while input():
+    turtle.update()
+    pass
+
+turtle.bye()
