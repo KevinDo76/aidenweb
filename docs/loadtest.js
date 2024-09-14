@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://raw.githubusercontent.com/KevinDo76/aidenweb/main/LICENSE");
+xhr.open("GET", "https://gist.githubusercontent.com/MattIPv4/045239bc27b16b2bcf7a3a9a4648c08a/raw/2411e31293a35f3e565f61e7490a806d4720ea7e/bee%2520movie%2520script");
 xhr.send();
 xhr.onload = () => {
   if (xhr.readyState == 4 && xhr.status == 200) {
