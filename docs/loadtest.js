@@ -10,9 +10,9 @@ xhr.onload = () => {
     console.log(textLine)
     for (let i=0;i<textLine.length;i++) {
         if (textLine[i]!=="") {
-            htmlText += "<p style='line-height: 5px;font-size: 15px;margin: 10px;'>"+textLine[i]+"</p>"
+            htmlText += "<p style='color: rgb("+String(i*3%255)+","+String(i*2%255)+","+String(i%200)+"); line-height: "+String(i*10+15)+"px;font-size: "+String(i*10+15)+"px;margin: 10px;'>"+textLine[i]+"</p>"
         } else {
-            htmlText += "<p style='line-height: 5px;font-size: 15px;margin: 10px;'></p><br style='display: block;content: \"\";margin-top: 20px;'> "
+            htmlText += "<p style='color: green; line-height: 5px;font-size: 15px;margin: 10px;'></p><br style='display: block;content: \"\";margin-top: 20px;'> "
         }
     }
     document.getElementById("text").innerHTML = htmlText
