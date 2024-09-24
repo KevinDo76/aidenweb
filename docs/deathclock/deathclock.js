@@ -30,6 +30,6 @@ function updateClock()
     " UTC"+(targetDate.getTimezoneOffset()/60 > 0 ? "-" : "+")+
     String(Math.abs(targetDate.getTimezoneOffset()/60)).padStart(2, '0')+
     ":00";
-    clockP.textContent = String(dayLeft).padStart(2, '0')+"d:"+String(hoursLeft).padStart(2, '0')+"h:"+String(minutesLeft).padStart(2, '0')+"m:"+String(secondsLeft).padStart(2, '0')+"s";
+    clockP.textContent = String(dayLeft).padStart(2, '0')+"d "+String(hoursLeft).padStart(2, '0')+"h "+String(minutesLeft).padStart(2, '0')+"m "+String(secondsLeft).padStart(2, '0')+"s";
     clockP.style = "color: "+((secondsLeft)%2==0 ? "#d1001f" : " #ff0000")
 }
