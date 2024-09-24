@@ -8,8 +8,9 @@ function updateClock()
 
     let targetP = document.getElementById("targetStamp");
     let clockP = document.getElementById("clock");
+    let timeDiffSeconds = targetTime-Math.floor(new Date().getTime()/1000);
 
-    let secondsLeft = targetTime-Math.floor(new Date().getTime()/1000);
+    let secondsLeft = timeDiffSeconds;
 
     let dayLeft = Math.floor(secondsLeft/(60*60*24));
     secondsLeft -= dayLeft * 60 * 60 * 24;
@@ -21,7 +22,18 @@ function updateClock()
     secondsLeft -= minutesLeft * 60;
     
     /*idk how to get date format working so here we are*/
-    targetP.textContent = "From "+String(targetDate.getMonth()+1).padStart(2, '0')+
+    
+    if (timeDiffSeconds>=0)
+    {
+        clockP.textContent = String(dayLeft).padStart(2, '0')+"d "+String(hoursLeft).padStart(2, '0')+"h "+String(minutesLeft).padStart(2, '0')+"m "+String(secondsLeft).padStart(2, '0')+"s";
+    }
+    else 
+    {
+
+        clockP.textContent = "TIME PASSED";
+    }
+
+    targetP.textContent = "Until "+String(targetDate.getMonth()+1).padStart(2, '0')+
     "/"+String(targetDate.getDate()).padStart(2, '0')+
     "/"+String(targetDate.getFullYear()).padStart(2, '0')+
     " "+String(targetDate.getHours())+
@@ -30,6 +42,6 @@ function updateClock()
     " UTC"+(targetDate.getTimezoneOffset()/60 > 0 ? "-" : "+")+
     String(Math.abs(targetDate.getTimezoneOffset()/60)).padStart(2, '0')+
     ":00";
-    clockP.textContent = String(dayLeft).padStart(2, '0')+"d "+String(hoursLeft).padStart(2, '0')+"h "+String(minutesLeft).padStart(2, '0')+"m "+String(secondsLeft).padStart(2, '0')+"s";
-    clockP.style = "color: "+((secondsLeft)%2==0 ? "#d1001f" : " #ff0000")
+
+    clockP.style = "color: "+((secondsLeft)%2==0 ? "#d1001f" : " #ff0000")+"; font-style: normal;"
 }
