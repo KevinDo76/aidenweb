@@ -1,7 +1,7 @@
 setInterval(updateClock,0.25)
 
 const timeZoneOffset = 7
-const targetTime = 1727280000
+const targetTime = 1730358000
 function updateClock()
 {
     let targetDate = new Date(targetTime*1000);
