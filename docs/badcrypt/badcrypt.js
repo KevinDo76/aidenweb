@@ -7,15 +7,19 @@ function sha512(str) {
   
 function wrapNumber(number, offset)
 {
-    let offsetNumber = number-32;
-    let added = offsetNumber + offset;
-    if (added<0)
-    {
-        return 95+added + 32;
-    } else if (added > 95) {
-        return added-95 + 32;
-    } else {
-        return added+32;
+    let added = (number-32) + (offset);
+    while (true) { 
+        if (added<0)
+        {
+            console.log(95+added + 32,"c");
+            added = 95+added;
+        } else if (added > 95) {
+            console.log(added%95 + 32,"b");
+            added = added%95;
+        } else {
+            console.log(added+32,"a");
+            return added+32;
+        }
     }
 }
 
@@ -37,7 +41,7 @@ function removePad(text)
     let isInPad=true;
     for (let i=text.length-1;i>=0;i--)
     {
-        if (text.charAt(i)=='~')
+        if (text.charAt(i)=='~' && isInPad)
         {
             isInPad = false;
             continue;
