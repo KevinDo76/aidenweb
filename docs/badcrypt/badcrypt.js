@@ -39,6 +39,10 @@ function decrypt(ciphertext, passDigest)
         let stringVar = wrapNumber(ciphertext.charCodeAt(i), -passDigest.charCodeAt(i));
         plaintext+=String.fromCharCode(stringVar);
     }
+    if (ciphertext.length < 128)
+    {
+        return "invalid length";
+    }
     return plaintext.replace(/\s+$/, '');
 }
 
@@ -61,8 +65,3 @@ function encrypt_loop()
     let plaintext = document.getElementById("inputText-encrypt").value;
     sha512(password).then(x => setBox("result-encrypt", encrypt(plaintext,x)));
 }
-
-setInterval(encrypt_loop, 1);
-setInterval(decrypt_loop, 1);
-
-  // prints: 4dc43467fe9140f217821252f94be94e49f963eed1889bceab83a1c36ffe3efe87334510605a9bf3b644626ac0cd0827a980b698efbc1bde75b537172ab8dbd0"

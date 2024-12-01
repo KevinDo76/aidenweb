@@ -53,7 +53,7 @@ textarea {
 	background-color: #4c4c4c;
 	width: 90%;
 	position: relative;
-	resize: vertical;
+	resize: none;
 	height: 75px;
 	min-height: 75px; 
 	max-height: 75px;
