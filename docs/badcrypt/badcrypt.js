@@ -11,18 +11,52 @@ function wrapNumber(number, offset)
     let added = offsetNumber + offset;
     if (added<0)
     {
-        return 94+added + 32;
-    } else if (added > 94) {
-        return added-94 + 32;
+        return 95+added + 32;
+    } else if (added > 95) {
+        return added-95 + 32;
     } else {
         return added+32;
     }
 }
 
+function addPad(text)
+{
+    let returnText = text;
+    returnText+="~";
+    for (let i=0;i<(128-(text.length+1));i++)
+    {
+        returnText+=String.fromCharCode(Math.floor(Math.random()*90)+32);
+    }
+    
+    return returnText;
+}
+
+function removePad(text)
+{
+    let returnText="";
+    let isInPad=true;
+    for (let i=text.length-1;i>=0;i--)
+    {
+        if (text.charAt(i)=='~')
+        {
+            isInPad = false;
+            continue;
+        }
+        if (isInPad)
+        {
+            continue;
+        }
+        returnText = text.charAt(i) + returnText;
+    }
+    return returnText;
+}
+
 function encrypt(plaintext, passDigest)
 {
     let cipher = "";
-    let paddedPlaintext = plaintext.padEnd(128," ");
+    //let paddedPlaintext = plaintext.padEnd(128," ");
+    let paddedPlaintext = addPad(plaintext);
+    console.log(paddedPlaintext.length);
     for (let i = 0;i<passDigest.length;i++)
     {
         let stringVar = wrapNumber(paddedPlaintext.charCodeAt(i), passDigest.charCodeAt(i));
@@ -43,7 +77,8 @@ function decrypt(ciphertext, passDigest)
     {
         return "invalid length";
     }
-    return plaintext.replace(/\s+$/, '');
+    //return plaintext.replace(/\s+$/, '');
+    return removePad(plaintext);
 }
 
 function setBox(id, text)
