@@ -11,13 +11,10 @@ function wrapNumber(number, offset)
     while (true) { 
         if (added<0)
         {
-            console.log(95+added + 32,"c");
             added = 95+added;
         } else if (added > 95) {
-            console.log(added%95 + 32,"b");
             added = added%95;
         } else {
-            console.log(added+32,"a");
             return added+32;
         }
     }
