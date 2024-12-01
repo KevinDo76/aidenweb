@@ -9,7 +9,7 @@ function wrapNumber(number, offset)
 {
     let added = (number-32) + (offset);
     while (true) { 
-        if (added<0)
+        if (added<=0)
         {
             added = 95+added;
         } else if (added > 95) {
@@ -24,9 +24,12 @@ function addPad(text)
 {
     let returnText = text;
     returnText+="~";
+    window.crypto.getRandomValues
     for (let i=0;i<(128-(text.length+1));i++)
     {
-        returnText+=String.fromCharCode(Math.floor(Math.random()*90)+32);
+        const array = new Uint32Array(1);
+        crypto.getRandomValues(array);
+        returnText+=String.fromCharCode(Math.floor(array[0]%91)+32);
     }
     
     return returnText;
