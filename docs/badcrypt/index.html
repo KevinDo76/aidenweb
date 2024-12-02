@@ -14,9 +14,9 @@
 
         <div class="divBody1" id="bee" style="">
             <p class = "mainheader" style = "display: block; padding-top: 10px">Encrypt</p>
-            <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">plaintext:</p>
+            <p id="encrypt-header-plaintext" class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">Plaintext:</p>
             <textarea onchange="encrypt_loop()" onkeyup="encrypt_loop()" id = "inputText-encrypt" maxlength="127"></textarea>
-            <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">password:</p>
+            <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">Password:</p>
             <textarea onchange="encrypt_loop()" onkeyup="encrypt_loop()" id = "password-encrypt" style="margin-bottom: 10px;"></textarea>
 
             <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">Result:</p>
@@ -29,7 +29,7 @@
             <p class = "mainheader" style = "display: block; padding-top: 18px">Decrypt</p>
             <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">ciphertext:</p>
             <textarea onchange="decrypt_loop()" onkeyup="decrypt_loop()" id = "inputText-decrypt" maxlength="128"></textarea>
-            <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">password:</p>
+            <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">Password:</p>
             <textarea onchange="decrypt_loop()" onkeyup="decrypt_loop()" id = "password-decrypt"></textarea>
 
             <p class = "paraMain1" style="margin-bottom: 0px; margin-top: 18px;">Result:</p>

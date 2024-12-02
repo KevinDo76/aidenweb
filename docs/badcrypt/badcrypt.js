@@ -115,9 +115,17 @@ function decrypt_loop()
     sha512(password).then(x => setBox("result-decrypt", decrypt(ciphertext, x)));
 }
 
-function encrypt_loop()
+function update_letter_count()
 {
-    let password = document.getElementById("password-encrypt").value;
     let plaintext = document.getElementById("inputText-encrypt").value;
+    document.getElementById("encrypt-header-plaintext").textContent = "Plaintext(" + plaintext.length + "/127):"
+}
+
+function encrypt_loop()
+{ 
+    let password = document.getElementById("password-encrypt").value;
+    let plaintext = document.getElementById("inputText-encrypt").value; 
     sha512(password).then(x => setBox("result-encrypt", encrypt(plaintext,x)));
 }
+
+setInterval(update_letter_count, 33);
