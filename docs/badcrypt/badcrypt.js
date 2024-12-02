@@ -63,7 +63,8 @@ function encrypt(plaintext, passDigest)
     console.log(paddedPlaintext.length);
     for (let i = 0;i<passDigest.length;i++)
     {
-        let stringVar = wrapNumber(paddedPlaintext.charCodeAt(i), passDigest.charCodeAt(i));
+        let flip = (passDigest.charCodeAt(i)%2==0) ? 1 : -1;
+        let stringVar = wrapNumber(paddedPlaintext.charCodeAt(i), flip*passDigest.charCodeAt(i));
         cipher+=String.fromCharCode(stringVar);
     }
     return cipher;
@@ -74,7 +75,8 @@ function decrypt(ciphertext, passDigest)
     let plaintext = "";
     for (let i = 0;i<passDigest.length;i++)
     {
-        let stringVar = wrapNumber(ciphertext.charCodeAt(i), -passDigest.charCodeAt(i));
+        let flip = (passDigest.charCodeAt(i)%2==0) ? 1 : -1;
+        let stringVar = wrapNumber(ciphertext.charCodeAt(i), flip*-passDigest.charCodeAt(i));
         plaintext+=String.fromCharCode(stringVar);
     }
     if (ciphertext.length < 128)
