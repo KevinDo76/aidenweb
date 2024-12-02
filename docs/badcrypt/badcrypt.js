@@ -92,6 +92,21 @@ function setBox(id, text)
     document.getElementById(id).value = text;
 }
 
+function copy_to_clipboard()
+{
+    let textBox = document.getElementById("result-encrypt"); 
+    textBox.select();
+    textBox.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(textBox.value);
+}
+
+function copy_to_clipboard_discord()
+{
+    let textBox = document.getElementById("result-encrypt"); 
+    textBox.select();
+    textBox.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText("```"+textBox.value+"```");
+}
 
 function decrypt_loop()
 {
