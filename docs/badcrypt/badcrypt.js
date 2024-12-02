@@ -9,10 +9,10 @@ function wrapNumber(number, offset)
 {
     let added = (number-32) + (offset);
     while (true) { 
-        if (added<=0)
+        if (added<0)
         {
             added = 95+added;
-        } else if (added > 95) {
+        } else if (added >= 95) {
             added = added%95;
         } else {
             return added+32;
