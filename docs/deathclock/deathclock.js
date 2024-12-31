@@ -36,7 +36,7 @@ function updateClock()
     targetP.textContent = "Until "+String(targetDate.getMonth()+1).padStart(2, '0')+
     "/"+String(targetDate.getDate()).padStart(2, '0')+
     "/"+String(targetDate.getFullYear()).padStart(2, '0')+
-    " "+String(targetDate.getHours())+
+    " "+String(targetDate.getHours()).padStart(2, '0')+
     ":"+String(targetDate.getMinutes()).padStart(2, '0')+
     " "+(targetDate.getHours() >= 12 ? 'PM' : 'AM')+
     " UTC"+(targetDate.getTimezoneOffset()/60 > 0 ? "-" : "+")+
