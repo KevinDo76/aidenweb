@@ -1,18 +1,112 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="../style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<link rel="icon" type="image/x-icon" href="../res/favicon.ico">
     </head>
-        <div class="divBody1">
-            <p class = "mainheader" onclick="window.location.href='../image.html'" style = "display: block; padding-top: 10px; padding-bottom: 10px;">Sudoku Solver</p>
-        </div>
-        <div class="divBody1" id="sudoku" style="height: 100%;">
-            <p>working on it boss</p>
-        </div>
     <body>
-    
+    <div class="divBody1">
+        <p class = "mainheader" onclick="window.location.href='../image.html'" style = "display: block; padding-top: 10px; padding-bottom: 10px;">Sudoku Solver</p>
+    </div>
+    <div class="divBody1" style="white-space: nowrap; min-width: 300px;" id="sudoku" style="height: 100%;">
+            <script src="sudoku.js"></script>
+            <input id="sudoBox0" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox1" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox2" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox3" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox4" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox5" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox6" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox7" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox8" required minlength="1" maxlength="1"></input>
+            <br>
+            <input id="sudoBox9" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox10" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox11" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox12" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox13" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox14" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox15" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox16" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox17" required minlength="1" maxlength="1"></input>
+            <br>
+            <input id="sudoBox18" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox19" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox20" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox21" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox22" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox23" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox24" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox25" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox26" required minlength="1" maxlength="1"></input>
+
+            <p style="margin: 0px; line-height: 20px;">----------------------------------------------------</p>
+            <input id="sudoBox27" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox28" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox29" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox30" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox31" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox32" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox33" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox34" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox35" required minlength="1" maxlength="1"></input>
+            <br>
+            <input id="sudoBox36" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox37" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox38" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox39" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox40" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox41" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox42" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox43" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox44" required minlength="1" maxlength="1"></input>
+            <br>
+            <input id="sudoBox45" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox46" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox47" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox48" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox49" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox50" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox51" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox52" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox53" required minlength="1" maxlength="1"></input>
+            <p style="margin: 0px; line-height: 20px;">----------------------------------------------------</p>
+            <input id="sudoBox54" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox55" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox56" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox57" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox58" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox59" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox60" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox61" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox62" required minlength="1" maxlength="1"></input>
+            <br>
+            <input id="sudoBox63" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox64" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox65" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox66" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox67" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox68" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox69" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox70" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox71" required minlength="1" maxlength="1"></input>
+            <br>
+            <input id="sudoBox72" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox73" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox74" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox75" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox76" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox77" required minlength="1" maxlength="1">|</input>
+            <input id="sudoBox78" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox79" required minlength="1" maxlength="1"></input>
+            <input id="sudoBox80" required minlength="1" maxlength="1"></input>
+            <br>      
+            <button onclick="sudokuSolve()">Solve (Backtracking)</button>
+            <button onclick="clearCells()">Clear</button>
+            <button onclick="clearAll()">Clear All</button>
+        </div>
     </body>
 </html>
